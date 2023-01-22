@@ -1,15 +1,26 @@
 #!/usr/bin/env sh
 
+# остановить публикацию при ошибках
 set -e
 
-
+# сборка
 npm run build
 
+# переход в каталог сборки
 cd dist
+
+# если вы публикуете на пользовательский домен
+
 
 git init
 git add -A
-git commit -m 'Deploy'
-git push -f origin git@github.com:Puffindor/Test-task-todo-list-.git master:gh-pages
+git commit -m 'deploy'
 
-cd-
+# если вы публикуете по адресу https://<USERNAME>.github.io
+ git push -f git@github.com:Puffindor/Puffindor.github.io.git master
+
+
+
+git push -f git@github.com:Puffindor/github.com:Puffindor/Test-task-todo-list.git master:gh-pages
+
+cd -

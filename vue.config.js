@@ -1,5 +1,6 @@
 const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: "/test-task/",
+  publicPath:
+    process.env.NODE_ENV === "production" ? "/Test-task-todo-list/" : "/",
 });
